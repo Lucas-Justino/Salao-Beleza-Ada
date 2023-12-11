@@ -1,10 +1,14 @@
 function descobrirNome() {
     let nome = prompt('Bem vindo ao nosso salão de beleza. Qual seu nome?');
+    while(nome.trim() === '') {
+        nome = prompt('Nome inválido, digite novamente!');
+    }
+
     return nome;
 }
 
 function cumprimentarCliente(nome) {
-    console.log(`Olá, ${nome}`);
+    alert(`Olá, ${nome}`);
 }
 
 function disponivelAgora() {
@@ -13,7 +17,7 @@ function disponivelAgora() {
     if (horarioEscolhido.toLowerCase() === 'sim') {
         return true;
     } else {
-        let horariosDisponiveis = '13:40, 14:00, 15:30, 16:45, 17:00';
+        let horariosDisponiveis = ['13:40', '14:00', '15:30', '16:45', '17:00'];
         console.log('Horários disponíveis: ' + horariosDisponiveis);
 
         let novoHorario = prompt('Escolha um dos horários disponíveis (' + horariosDisponiveis + ') no formato (hh:mm)');
@@ -76,7 +80,7 @@ function exibirComprovante(formaPagamento, valor, troco){
 function confirmarValorPago(valor) {
     let opcaoPagamento = prompt('Informe a forma de pagamento:\n 1- Dinheiro\n 2- Cartão\n 3- Pix')
     let formaPagamento = "";
-    let troco = 0;  
+    let troco = 0; 
     switch(opcaoPagamento){
         case "1":
             troco = pagamentoDinheiro(valor);
@@ -110,7 +114,7 @@ function salaoDeBeleza() {
         let valor = informarValor(); //FIZ ESSA ALTERAÇÃO PARA DEVOLVER O VALOR DO CORTE
         confirmarValorPago(valor);
     } else {
-        console.log('Então podemos marcar outra hora!');
+        alert('Então podemos marcar outra hora!'); 
     }
 }
 
