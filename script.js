@@ -1,12 +1,46 @@
-function cortarCabelo(nome){
-    saudacao(nome); //FUNÇÃO PARA DIZER OLÁ
-    if(verificarHorario() === true){ //FUNÇÃO PARA VERIFICAR O HORARIO. ENQUANTO NAO ENCONTRAR O HORARIO, IR PERGUNTANDO
-        iniciarCorte(); //FUNÇÃO PARA INICIAR O CORTE
-        terminarCorte(); //FUNÇÃO PARA TERMINAR O CORTE
-        let valorCorte = calcularValorCorte(); //FUNÇÃO PARA CALCULAR E DEVOLVER O VALOR DO CORTE
-        verificarValorCorte(valorCorte); //FUNÇÃO PARA VERIFICAR SE O VALOR ENTREGUE FOI O VALOR DO CORTE. ENQUANTO NÃO ESTIVER CERTO, IR PEDINDO O VALOR.
+function descobrirNome() {
+    let nome = prompt('Bem vindo ao nosso salão de beleza. Qual seu nome?');
+    return nome;
+}
+
+function cumprimentarCliente(nome) {
+    console.log(`Olá, ${nome}`);
+}
+
+function iniciarCorte() {
+
+}
+
+function terminarCorte() {
+
+}
+
+function finalizandoAgora() {
+
+}
+
+function informarValor() {
+
+}
+
+function confirmarValorPago() {
+
+}
+
+
+function salaoDeBeleza() {
+    let nomeDoCliente = descobrirNome();
+    cumprimentarCliente(nomeDoCliente);
+
+    let disponibilidade = disponivelAgora();
+    if(disponibilidade) {
+        iniciarCorte();
+        terminarCorte();
+        informarValor();
+        confirmarValorPago();
+    } else {
+        console.log('Então podemos marcar outra hora!');
     }
 }
 
-nome = prompt("Bem vindo ao nosso salão de beleza. Qual seu nome?")
-cortarCabelo(nome);
+salaoDeBeleza();
