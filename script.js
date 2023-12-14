@@ -77,9 +77,23 @@ function disponivelAgora() {
   }
 }
 
-function iniciarCorte() {}
+function iniciarCorte() {
+  let escolhaCorte = prompt('Você deseja um corte na máquina ou na tesoura? (Responda "máquina" ou "tesoura")');
 
-function terminarCorte() {}
+  while (escolhaCorte.toLowerCase() !== 'máquina' && escolhaCorte.toLowerCase() !== 'tesoura') {
+      escolhaCorte = prompt('Escolha inválida. Por favor, responda "máquina" ou "tesoura"');
+  }
+
+  if (escolhaCorte.toLowerCase() === 'máquina') {
+      alert('Iniciando o corte na máquina. Relaxe e aproveite!');
+  } else {
+      alert('Iniciando o corte na tesoura. Vamos criar um visual incrível!');
+  }
+}
+    
+function terminarCorte() {
+  alert('Corte finalizado. Confira o resultado no espelho!');
+}
 
 function finalizandoAgora() {}
 
