@@ -95,9 +95,17 @@ function terminarCorte() {
   alert('Corte finalizado. Confira o resultado no espelho!');
 }
 
-function finalizandoAgora() {}
+function finalizandoAgora() {
+        alert("O atendimento está sendo finalizado. Obrigado pela visita ao Salão CodeSix!");
+      }
 
-function informarValor() {}
+function informarValor() {
+        let valorCorte = 25;
+        alert(`O valor do corte é R$${valorCorte}`);
+
+        return parseFloat(valorCorte);
+      }
+
 
 function pagamentoDinheiro(valor) {
   //VERIFICACAO DE PAGAMENTO IMPLEMENTADA APENAS PARA DINHEIRO
@@ -138,10 +146,11 @@ function exibirComprovante(formaPagamento, valor, troco) {
 
 function confirmarValorPago(valor) {
   let opcaoPagamento = prompt(
-    "Informe a forma de pagamento:\n 1- Dinheiro\n 2- Cartão\n 3- Pix"
+    "Informe o numero referente a forma de pagamento desejada:\n 1- Dinheiro\n 2- Cartão\n 3- Pix"
   );
   let formaPagamento = "";
   let troco = 0;
+
   switch (opcaoPagamento) {
     case "1":
       troco = pagamentoDinheiro(valor);
@@ -171,6 +180,7 @@ function salaoDeBeleza() {
     terminarCorte();
     let valor = informarValor(); //FIZ ESSA ALTERAÇÃO PARA DEVOLVER O VALOR DO CORTE
     confirmarValorPago(valor);
+    finalizandoAgora();
   } else {
     alert("Então podemos marcar outra hora!");
   }
