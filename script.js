@@ -164,8 +164,6 @@ function confirmarValorPago(valor) {
 }
 
 function salaoDeBeleza() {
-  //let nomeDoCliente = descobrirNome();
-  //cumprimentarCliente(nomeDoCliente);
 
   let disponibilidade = disponivelAgora();
   if (disponibilidade) {
